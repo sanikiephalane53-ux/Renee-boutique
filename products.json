@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Lacoste Sneakers",
+    "price": "R700",
+    "category": "Shoes",
+    "details": "Sizes 6–10",
+    "image": "images/product-1.jpg"
+  },
+  {
+    "name": "Quilted Bedspread",
+    "price": "R350",
+    "category": "Blankets",
+    "details": "All colours",
+    "image": "images/product-2.jpg"
+  },
+  {
+    "name": "Lunch Box",
+    "price": "R120",
+    "category": "Dinner Set",
+    "details": "Multiple colours",
+    "image": "images/product-3.jpg"
+  },
+  {
+    "name": "Warm Socks",
+    "price": "R70",
+    "category": "Socks",
+    "details": "Multiple colours",
+    "image": "images/product-4.jpg"
+  },
+  {
+    "name": "16-inch School Backpack",
+    "price": "R150",
+    "category": "Bags",
+    "details": "Multiple colours",
+    "image": "images/product-5.jpg"
+  },
+  {
+    "name": "Vacuum Flask & Cups Set",
+    "price": "R80",
+    "category": "Dinner Set",
+    "details": "Multiple colours",
+    "image": "images/product-6.jpg"
+  },
+  {
+    "name": "Crochet Bucket Hat",
+    "price": "R30",
+    "category": "Clothes",
+    "details": "White & brown",
+    "image": "images/product-7.jpg"
+  },
+  {
+    "name": "Curtains",
+    "price": "R250",
+    "category": "Curtains",
+    "details": "Blue/white & burgundy/white",
+    "image": "images/product-8.jpg"
+  },
+  {
+    "name": "Stretch Chair Covers",
+    "price": "R550",
+    "category": "Home Decor",
+    "details": "Black & navy blue",
+    "image": "images/product-9.jpg"
+  }
+]

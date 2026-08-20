@@ -1,0 +1,35 @@
+# RENEE'S BOUTIQUE — EASY PRODUCT MANAGEMENT
+
+Your website now reads products from `products.json`.
+
+## To add a product
+1. Open `products.json` in GitHub.
+2. Click the pencil (Edit) button.
+3. Add another product object using this format:
+
+{
+  "name": "Product name",
+  "price": "R250",
+  "category": "Shoes",
+  "details": "Sizes 6–10",
+  "image": "images/my-shoe.jpg"
+}
+
+4. Commit the change.
+
+## To add a product photo
+1. Open the `images` folder in GitHub.
+2. Click Add file → Upload files.
+3. Upload your photo.
+4. In `products.json`, make sure the `image` value exactly matches the uploaded filename, for example:
+   `images/my-shoe.jpg`
+5. Commit the change.
+
+## Categories
+Use one of:
+Shoes, Bags, Clothes, Blankets, Socks, Curtains, Dinner Set, Home Decor
+
+## Important
+Keep the JSON punctuation exactly as shown. Each product needs a comma after it except the last product.
+
+This is a GitHub-based self-management system: you can add/edit/remove products yourself without changing the website design.
