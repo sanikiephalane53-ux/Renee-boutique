@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RENEE'S BOUTIQUE</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#fff8fb;color:#222}
+header{background:linear-gradient(135deg,#8b1455,#d94c87);color:white;padding:28px 18px;text-align:center}
+header h1{margin:0;font-size:30px;letter-spacing:1px}header p{margin:8px 0 0}
+nav{display:flex;gap:8px;overflow:auto;padding:12px;background:white;position:sticky;top:0;z-index:5;box-shadow:0 2px 8px #0001}
+nav button{border:0;background:#f4d8e5;border-radius:20px;padding:10px 15px;white-space:nowrap;cursor:pointer}
+nav button.active{background:#8b1455;color:white}
+.container{max-width:1100px;margin:auto;padding:20px}
+.admin{background:white;border-radius:18px;padding:18px;box-shadow:0 3px 15px #00000012;margin-bottom:22px}
+.admin h2{margin-top:0}.upload{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+input,select,button{font:inherit}.upload input,.upload select{padding:11px;border:1px solid #ddd;border-radius:10px}
+.add{background:#8b1455;color:white;border:0;border-radius:10px;padding:11px 18px;cursor:pointer}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:16px}
+.card{background:white;border-radius:16px;overflow:hidden;box-shadow:0 3px 14px #0001;position:relative}
+.card img{width:100%;height:220px;object-fit:cover;background:#eee}.info{padding:12px}.info h3{margin:0 0 6px;font-size:17px}.price{font-weight:bold;color:#8b1455}
+.order{display:block;text-align:center;text-decoration:none;background:#25d366;color:white;padding:10px;margin-top:10px;border-radius:9px;font-weight:bold}
+.remove{position:absolute;right:8px;top:8px;background:#fff;color:#c00;border:0;border-radius:50%;width:30px;height:30px;cursor:pointer}
+.empty{text-align:center;padding:45px 15px;color:#777;background:white;border-radius:16px}
+footer{text-align:center;padding:28px;background:#8b1455;color:white;margin-top:35px}
+.small{font-size:13px;color:#777;margin-top:8px}
+</style>
+</head>
+<body>
+<header>
+<h1>RENEE'S BOUTIQUE</h1>
+<p>Clothes • Bags • Blankets • Shoes • Socks • Curtains • Dinner Sets</p>
+<p><strong>WhatsApp Orders Only: 0622627924</strong></p>
+</header>
+
+<nav id="nav"></nav>
+
+<main class="container">
+<section class="admin">
+<h2>📸 Add Your Products</h2>
+<p>Select a photo, choose its category, enter the product name and price, then tap <b>Add Product</b>.</p>
+<div class="upload">
+<input id="photo" type="file" accept="image/*">
+<input id="name" type="text" placeholder="Product name">
+<input id="price" type="text" placeholder="Price (e.g. R250)">
+<select id="category"></select>
+<button class="add" onclick="addProduct()">Add Product</button>
+</div>
+<p class="small">Your products are saved in this browser, so you can keep adding photos from your phone.</p>
+</section>
+
+<div id="products" class="grid"></div>
+</main>
+
+<footer>
+<b>RENEE'S BOUTIQUE</b><br>
+WhatsApp: 0622627924<br>
+Clothes, Bags, Blankets, Shoes, Socks, Curtains & Dinner Sets
+</footer>
+
+<script>
+const categories=["All","Clothes","Bags","Blankets","Shoes","Socks","Curtains","Dinner Sets"];
+let products=JSON.parse(localStorage.getItem("reneesProducts")||"[]");
+let current="All";
+
+function setup(){
+ const nav=document.getElementById("nav"), cat=document.getElementById("category");
+ categories.forEach(c=>{
+   let b=document.createElement("button"); b.textContent=c; b.onclick=()=>{current=c;render()};
+   if(c==="All")b.classList.add("active"); nav.appendChild(b);
+   if(c!=="All"){let o=document.createElement("option");o.value=c;o.textContent=c;cat.appendChild(o)}
+ });
+ render();
+}
+function render(){
+ document.querySelectorAll("nav button").forEach(b=>b.classList.toggle("active",b.textContent===current));
+ const box=document.getElementById("products");
+ let list=current==="All"?products:products.filter(p=>p.category===current);
+ if(!list.length){box.innerHTML='<div class="empty" style="grid-column:1/-1">No products yet in this category.<br>Upload your first photo above 📸</div>';return}
+ box.innerHTML="";
+ list.forEach(p=>{
+   const card=document.createElement("article");card.className="card";
+   const msg=encodeURIComponent(`Hello Renee's Boutique, I would like to order: ${p.name}${p.price?' - '+p.price:''}`);
+   card.innerHTML=`<button class="remove" onclick="removeProduct('${p.id}')">×</button>
+   <img src="${p.image}" alt="${p.name}">
+   <div class="info"><h3>${p.name}</h3><div>${p.category}</div>${p.price?`<div class="price">${p.price}</div>`:""}
+   <a class="order" target="_blank" href="https://wa.me/27622627924?text=${msg}">Order on WhatsApp</a></div>`;
+   box.appendChild(card);
+ });
+}
+function addProduct(){
+ const file=document.getElementById("photo").files[0], name=document.getElementById("name").value.trim();
+ if(!file||!name){alert("Please choose a photo and enter a product name.");return}
+ const reader=new FileReader();
+ reader.onload=()=>{
+   products.unshift({id:Date.now().toString(),name,price:document.getElementById("price").value.trim(),category:document.getElementById("category").value,image:reader.result});
+   localStorage.setItem("reneesProducts",JSON.stringify(products));
+   document.getElementById("photo").value="";document.getElementById("name").value="";document.getElementById("price").value="";
+   render();
+ };
+ reader.readAsDataURL(file);
+}
+function removeProduct(id){
+ if(confirm("Remove this product?")){products=products.filter(p=>p.id!==id);localStorage.setItem("reneesProducts",JSON.stringify(products));render()}
+}
+setup();
+</script>
+</body>
+</html>
