@@ -1,53 +1,37 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>RENEE'S BOUTIQUE</title>
 <style>
-*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:#111;background:#fff}
-.topbar{background:#f7b6cb;padding:13px 6%;display:flex;justify-content:space-between;gap:20px;font-weight:700;font-size:14px}
-.nav{height:105px;display:flex;align-items:center;justify-content:space-between;padding:0 5%;background:#fff}
-.logo{display:flex;align-items:center;gap:12px}.logo-mark{font-size:54px}.logo h1{font-size:30px;line-height:.9;margin:0}.logo h1 span{color:#e94d80}.tag{font-size:11px;letter-spacing:4px;margin-top:8px;color:#555}
-nav a{color:#111;text-decoration:none;font-weight:700;margin:0 20px}nav a:hover{color:#e94d80}
-.btn{border:2px solid #ed5b8a;color:#ed5b8a;padding:16px 25px;border-radius:6px;text-decoration:none;font-weight:700;display:inline-block}.btn.fill{background:#ed5b8a;color:#fff}
-.hero{min-height:460px;background:linear-gradient(90deg,#fff0f5 0%,#fff 45%,#f8eeee 100%);display:grid;grid-template-columns:43% 57%;align-items:center}
-.hero-copy{padding:60px 8%}.eyebrow{color:#e94d80;font-weight:800;letter-spacing:4px}.hero h2{font-size:64px;line-height:.95;margin:14px 0}.hero h2 span{color:#e94d80}.hero p{font-size:20px;line-height:1.5;max-width:450px}.hero-img{height:460px;background:url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1200&q=85') center/cover}
-.section{padding:70px 4%}.section-title{text-align:center}.section-title small{color:#e94d80;font-weight:800;letter-spacing:3px}.section-title h3{font-size:38px;margin:12px 0 40px}.categories{display:grid;grid-template-columns:repeat(7,1fr);gap:16px}.cat{border:1px solid #ddd;border-radius:5px;overflow:hidden;background:#fff;text-align:center}.cat img{width:100%;height:150px;object-fit:cover}.cat b{display:block;padding:15px 5px}
-.contact{background:#fff0f5;text-align:center;padding:55px 20px}.contact h3{font-size:32px;margin:0 0 12px}.contact p{font-size:18px}.footer{background:#111;color:#fff;text-align:center;padding:28px}
-@media(max-width:900px){.nav{height:auto;padding:20px 5%;flex-wrap:wrap;gap:20px}.hero{grid-template-columns:1fr}.hero-img{height:330px;order:-1}.hero h2{font-size:48px}.categories{grid-template-columns:repeat(3,1fr)}nav{display:none}}
-@media(max-width:520px){.topbar{font-size:11px}.categories{grid-template-columns:repeat(2,1fr)}.cat img{height:130px}}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:#1d1d1d;background:#fff}
+.top{background:#f5b4c9;padding:11px 5%;display:flex;justify-content:space-between;gap:15px;font-weight:700;font-size:14px;flex-wrap:wrap}
+header{padding:22px 5%;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;background:#fff}
+.logo{font-size:29px;font-weight:900;line-height:.9}.logo span{color:#e84f82}.tag{font-size:10px;letter-spacing:4px;color:#777;margin-top:8px}
+nav a{margin:0 12px;text-decoration:none;color:#222;font-weight:700}
+.btn,.order{display:inline-block;background:#e84f82;color:white;text-decoration:none;padding:13px 18px;border-radius:6px;font-weight:800}
+.hero{display:grid;grid-template-columns:1fr 1fr;min-height:420px;background:linear-gradient(120deg,#fff0f5,#fff)}
+.hero-text{padding:65px 9%;display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
+.kicker{color:#e84f82;letter-spacing:4px;font-weight:800}h1{font-size:60px;line-height:.95;margin:15px 0}h1 span{color:#e84f82}.hero p{font-size:19px;line-height:1.5;max-width:480px}
+.hero-photo{background:url('images/product-1.jpg') center/cover;min-height:420px}
+.section{padding:65px 5%}.heading{text-align:center;margin-bottom:38px}.heading small{color:#e84f82;letter-spacing:3px;font-weight:800}.heading h2{font-size:38px;margin:10px 0}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}.card{border:1px solid #eee;border-radius:12px;overflow:hidden;background:white;box-shadow:0 5px 20px #0000000d}.card img{width:100%;height:280px;object-fit:cover}.card-body{padding:18px}.category{color:#e84f82;text-transform:uppercase;font-size:12px;font-weight:800;letter-spacing:1px}.card h3{font-size:22px;margin:8px 0}.card p{color:#666;margin:0 0 12px}.price{font-size:25px;font-weight:900;margin-bottom:12px}.order{width:100%;text-align:center}
+.about,.contact{background:#fff0f5;text-align:center;padding:60px 8%}.about p{max-width:760px;margin:15px auto;line-height:1.7;font-size:17px}
+footer{background:#171717;color:#fff;text-align:center;padding:25px}
+@media(max-width:850px){.hero{grid-template-columns:1fr}.hero-photo{order:-1;min-height:300px}h1{font-size:48px}.grid{grid-template-columns:repeat(2,1fr)}nav{display:none}}
+@media(max-width:560px){.grid{grid-template-columns:1fr}.top{font-size:11px}header{justify-content:center;text-align:center}}
 </style>
 </head>
 <body>
-<div class="topbar"><span>◉ WHATSAPP ORDER ONLY</span><span>☎ 0622627924</span><span>🚚 FAST & RELIABLE SERVICE</span></div>
-
-<header class="nav">
-  <div class="logo"><div class="logo-mark">👗</div><div><h1>RENEE'S<br><span>BOUTIQUE</span></h1><div class="tag">STYLE THAT SPEAKS</div></div></div>
-  <nav><a href="#home">HOME</a><a href="#shop">SHOP</a><a href="#about">For About Us
-</a><a href="#contact">CONTACT US</a></nav>
-  <a class="btn" href="https://wa.me/27622627924?text=Hello%20RENEE'S%20BOUTIQUE,%20I%20would%20like%20to%20place%20an%20order.">◉ ORDER ON WHATSAPP</a>
+<div class="top"><span>WHATSAPP ORDER ONLY</span><span>0622627924</span><span>QUALITY • STYLE • VALUE</span></div>
+<header>
+<div><div class="logo">RENEE'S<br><span>BOUTIQUE</span></div><div class="tag">STYLE THAT SPEAKS</div></div>
+<nav><a href="#home">HOME</a><a href="#shop">SHOP</a><a href="#about">ABOUT US</a><a href="#contact">CONTACT</a></nav>
+<a class="btn" href="https://wa.me/27622627924?text=Hello%20RENEE%27S%20BOUTIQUE%2C%20I%20would%20like%20to%20place%20an%20order.">ORDER ON WHATSAPP</a>
 </header>
-
-<section class="hero" id="home">
-  <div class="hero-copy"><div class="eyebrow">WELCOME TO</div><h2>RENEE'S<br><span>BOUTIQUE</span></h2><p>Your one-stop shop for beautiful and quality products.</p><a class="btn fill" href="https://wa.me/27622627924?text=Hello%20RENEE'S%20BOUTIQUE,%20I%20would%20like%20to%20place%20an%20order.">◉ ORDER ON WHATSAPP</a></div>
-  <div class="hero-img"></div>
-</section>
-
-<section class="section" id="shop">
-  <div class="section-title"><small>SHOP BY CATEGORY</small><h3>Our Categories</h3></div>
-  <div class="categories">
-    <div class="cat"><img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=500&q=80"><b>CLOTHES</b></div>
-    <div class="cat"><img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=500&q=80"><b>BAG</b></div>
-    <div class="cat"><img src="https://images.unsplash.com/photo-1584559582128-b8be739912e19?auto=format&fit=crop&w=500&q=80"><b>BLANKET</b></div>
-    <div class="cat"><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=500&q=80"><b>SHOES</b></div>
-    <div class="cat"><img src="https://images.unsplash.com/photo-1586350977771-b3b0abd50c82?auto=format&fit=crop&w=500&q=80"><b>SOCKS</b></div>
-    <div class="cat"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=500&q=80"><b>CURTAINS</b></div>
-    <div class="cat"><img src="https://images.unsplash.com/photo-1603199506016-b9a594b593c0?auto=format&fit=crop&w=500&q=80"><b>DINNER SET</b></div>
-  </div>
-</section>
-
-<section class="contact" id="about"><h3>RENEE'S BOUTIQUE</h3><p>Quality products • Friendly service • WhatsApp orders only</p><a class="btn fill" href="https://wa.me/27622627924?text=Hello%20RENEE'S%20BOUTIQUE,%20I%20would%20like%20to%20place%20an%20order.">ORDER ON WHATSAPP</a></section>
-<footer class="footer" id="contact">© 2026 RENEE'S BOUTIQUE • WhatsApp: 0622627924</footer>
-</body>
-</html>
+<section class="hero" id="home"><div class="hero-text"><div class="kicker">WELCOME TO</div><h1>RENEE'S<br><span>BOUTIQUE</span></h1><p>Your one-stop shop for clothes, bags, blankets, shoes, socks, curtains and home items.</p><a class="btn" href="#shop">SHOP OUR PRODUCTS</a></div><div class="hero-photo"></div></section>
+<section class="section" id="shop"><div class="heading"><small>SHOP OUR PRODUCTS</small><h2>Featured Products</h2></div><div class="grid"><article class="card"><img src="images/product-1.jpg" alt="Lacoste Sneakers"><div class="card-body"><div class="category">Shoes</div><h3>Lacoste Sneakers</h3><p>Sizes 6–10</p><div class="price">R700</div><a class="order" href="https://wa.me/27622627924?text=Hello%20RENEE%27S%20BOUTIQUE%2C%20I%20would%20like%20to%20order%20Lacoste%20Sneakers.">Order on WhatsApp</a></div></article><article class="card"><img src="images/product-2.jpg" alt="Quilted Bedspread"><div class="card-body"><div class="category">Blankets</div><h3>Quilted Bedspread</h3><p>All colours</p><div class="price">R350</div><a class="order" href="https://wa.me/27622627924?text=Hello%20RENEE%27S%20BOUTIQUE%2C%20I%20would%20like%20to%20order%20Quilted%20Bedspread.">Order on WhatsApp</a></div></article><article class="card"><img src="images/product-3.jpg" alt="Lunch Box"><div class="card-body"><div class="category">Dinner Set</div><h3>Lunch Box</h3><p>Multiple colours</p><div class="price">R120</div><a class="order" href="https://wa.me/27622627924?text=Hello%20RENEE%27S%20BOUTIQUE%2C%20I%20would%20like%20to%20order%20Lunch%20Box.">Order on WhatsApp</a></div></article><article class="card"><img src="images/product-4.jpg" alt="Warm Socks"><div class="card-body"><div class="category">Socks</div><h3>Warm Socks</h3><p>Multiple colours</p><div class="price">R70</div><a class="order" href="https://wa.me/27622627924?text=Hello%20RENEE%27S%20BOUTIQUE%2C%20I%20would%20like%20to%20order%20Warm%20Socks.">Order on WhatsApp</a></div></article><article class="card"><img src="images/product-5.jpg" alt="16-inch School Backpack"><div class="card-body"><div class="category">Bags</div><h3>16-inch School Backpack</h3><p>Multiple colours</p><div class="price">R150</div><a class="order" href="https://wa.me/27622627924?text=Hello%20RENEE%27S%20BOUTIQUE%2C%20I%20would%20like%20to%20order%2016-inch%20School%20Backpack.">Order on WhatsApp</a></div></article><article class="card"><img src="images/product-6.jpg" alt="Vacuum Flask &amp; Cups Set"><div class="card-body"><div class="category">Dinner Set</div><h3>Vacuum Flask &amp; Cups Set</h3><p>Multiple colours</p><div class="price">R80</div><a class="order" href="https://wa.me/27622627924?text=Hello%20RENEE%27S%20BOUTIQUE%2C%20I%20would%20like%20to%20order%20Vacuum%20Flask%20&amp;%20Cups%20Set.">Order on WhatsApp</a></div></article><article class="card"><img src="images/product-7.jpg" alt="Crochet Bucket Hat"><div class="card-body"><div class="category">Clothes</div><h3>Crochet Bucket Hat</h3><p>White &amp; brown</p><div class="price">R30</div><a class="order" href="https://wa.me/27622627924?text=Hello%20RENEE%27S%20BOUTIQUE%2C%20I%20would%20like%20to%20order%20Crochet%20Bucket%20Hat.">Order on WhatsApp</a></div></article><article class="card"><img src="images/product-8.jpg" alt="Curtains"><div class="card-body"><div class="category">Curtains</div><h3>Curtains</h3><p>Blue/white &amp; burgundy/white</p><div class="price">R250</div><a class="order" href="https://wa.me/27622627924?text=Hello%20RENEE%27S%20BOUTIQUE%2C%20I%20would%20like%20to%20order%20Curtains.">Order on WhatsApp</a></div></article><article class="card"><img src="images/product-9.jpg" alt="Stretch Chair Covers"><div class="card-body"><div class="category">Home Decor</div><h3>Stretch Chair Covers</h3><p>Black &amp; navy blue</p><div class="price">R550</div><a class="order" href="https://wa.me/27622627924?text=Hello%20RENEE%27S%20BOUTIQUE%2C%20I%20would%20like%20to%20order%20Stretch%20Chair%20Covers.">Order on WhatsApp</a></div></article></div></section>
+<section class="about" id="about"><h2>About Us</h2><p>Welcome to <b>RENEE'S BOUTIQUE</b>, your one-stop shop for beautiful and quality products. We offer clothes, bags, blankets, shoes, socks, curtains and home items, carefully selected to give you quality, style and value. Shopping is easy and convenient — choose what you like and order directly through WhatsApp.</p><a class="btn" href="https://wa.me/27622627924?text=Hello%20RENEE%27S%20BOUTIQUE%2C%20I%20would%20like%20to%20place%20an%20order.">ORDER ON WHATSAPP</a></section>
+<section class="contact" id="contact"><h2>Contact RENEE'S BOUTIQUE</h2><p>WhatsApp orders only: <b>0622627924</b></p><a class="btn" href="https://wa.me/27622627924?text=Hello%20RENEE%27S%20BOUTIQUE%2C%20I%20would%20like%20to%20place%20an%20order.">CHAT ON WHATSAPP</a></section>
+<footer>© 2026 RENEE'S BOUTIQUE • WhatsApp 0622627924</footer>
+</body></html>
