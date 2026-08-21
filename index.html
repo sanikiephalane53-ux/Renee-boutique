@@ -1,88 +1,40 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>RENEE'S BOUTIQUE</title>
+<meta name="description" content="RENEE'S BOUTIQUE – clothes, bags, blankets, shoes, socks, curtains and home items. WhatsApp orders only.">
 <style>
-*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:#1d1d1d;background:#fff}
-.top{background:#f5b4c9;padding:11px 5%;display:flex;justify-content:space-between;gap:15px;font-weight:700;font-size:14px;flex-wrap:wrap}
-header{padding:22px 5%;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;background:#fff}
-.logo{font-size:29px;font-weight:900;line-height:.9}.logo span{color:#e84f82}.tag{font-size:10px;letter-spacing:4px;color:#777;margin-top:8px}
-nav a{margin:0 12px;text-decoration:none;color:#222;font-weight:700}
-.btn,.order{display:inline-block;background:#e84f82;color:white;text-decoration:none;padding:13px 18px;border-radius:6px;font-weight:800}
-.hero{display:grid;grid-template-columns:1fr 1fr;min-height:420px;background:linear-gradient(120deg,#fff0f5,#fff)}
-.hero-text{padding:65px 9%;display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
-.kicker{color:#e84f82;letter-spacing:4px;font-weight:800}h1{font-size:60px;line-height:.95;margin:15px 0}h1 span{color:#e84f82}.hero p{font-size:19px;line-height:1.5;max-width:480px}
-.hero-photo{background:url('images/product-1.jpg') center/cover;min-height:420px}
-.section{padding:65px 5%}.heading{text-align:center;margin-bottom:38px}.heading small{color:#e84f82;letter-spacing:3px;font-weight:800}.heading h2{font-size:38px;margin:10px 0}
-.category-buttons{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:-5px 0 30px}.cat{border:1px solid #e84f82;background:#fff;color:#e84f82;padding:11px 17px;border-radius:999px;font-weight:800;cursor:pointer}.cat.active,.cat:hover{background:#e84f82;color:#fff}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}.card{border:1px solid #eee;border-radius:12px;overflow:hidden;background:white;box-shadow:0 5px 20px #0000000d}.card img{width:100%;height:280px;object-fit:cover}.card-body{padding:18px}.category{color:#e84f82;text-transform:uppercase;font-size:12px;font-weight:800;letter-spacing:1px}.card h3{font-size:22px;margin:8px 0}.card p{color:#666;margin:0 0 12px}.price{font-size:25px;font-weight:900;margin-bottom:12px}.order{width:100%;text-align:center}
-.about,.contact{background:#fff0f5;text-align:center;padding:60px 8%}.about p{max-width:760px;margin:15px auto;line-height:1.7;font-size:17px}
-footer{background:#171717;color:#fff;text-align:center;padding:25px}
-@media(max-width:850px){.hero{grid-template-columns:1fr}.hero-photo{order:-1;min-height:300px}h1{font-size:48px}.grid{grid-template-columns:repeat(2,1fr)}nav{display:none}}
-@media(max-width:560px){.grid{grid-template-columns:1fr}.top{font-size:11px}header{justify-content:center;text-align:center}}
+:root{--pink:#e84f82;--soft:#fff0f5;--dark:#171717;--gold:#f3c969}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:#202020;background:#fff}.top{background:var(--pink);color:#fff;padding:10px 5%;display:flex;justify-content:center;gap:28px;font-weight:800;font-size:13px;flex-wrap:wrap}header{padding:18px 5%;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;background:#fff;position:sticky;top:0;z-index:20;box-shadow:0 2px 14px #00000012}.logo{font-size:27px;font-weight:900;line-height:.9}.logo span{color:var(--pink)}.tag{font-size:9px;letter-spacing:4px;color:#777;margin-top:8px}nav{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}nav a{text-decoration:none;color:#222;font-weight:800;padding:9px 10px}nav a:hover{color:var(--pink)}.btn,.order{display:inline-block;background:var(--pink);color:white;text-decoration:none;padding:12px 17px;border-radius:7px;font-weight:800;border:0;cursor:pointer}.hero{display:grid;grid-template-columns:1fr 1fr;min-height:470px;background:linear-gradient(120deg,#fff0f5,#fff)}.hero-text{padding:60px 9%;display:flex;flex-direction:column;justify-content:center;align-items:flex-start}.kicker{color:var(--pink);letter-spacing:4px;font-weight:900}h1{font-size:60px;line-height:.95;margin:15px 0}h1 span{color:var(--pink)}.hero p{font-size:18px;line-height:1.55;max-width:520px}.hero-photo{min-height:470px;background:url('images/shoes.jpg') center/cover no-repeat}.notice{margin:24px auto 0;max-width:1050px;background:#fff8df;border:2px solid var(--gold);border-radius:12px;padding:18px 22px;text-align:center;font-weight:800}.notice span{color:var(--pink)}.section{padding:65px 5%}.heading{text-align:center;margin-bottom:32px}.heading small{color:var(--pink);letter-spacing:3px;font-weight:900}.heading h2{font-size:38px;margin:10px 0}.category-buttons{display:flex;flex-wrap:wrap;justify-content:center;gap:9px;margin-bottom:30px}.cat{border:1px solid var(--pink);background:#fff;color:var(--pink);padding:10px 16px;border-radius:999px;font-weight:800;cursor:pointer}.cat.active,.cat:hover{background:var(--pink);color:#fff}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}.card{border:1px solid #eee;border-radius:14px;overflow:hidden;background:#fff;box-shadow:0 6px 20px #0000000d;display:flex;flex-direction:column}.card img{width:100%;height:250px;object-fit:cover;display:block;background:#f7f7f7}.card-body{padding:16px;display:flex;flex-direction:column;flex:1}.category{color:var(--pink);text-transform:uppercase;font-size:11px;font-weight:900;letter-spacing:1px}.card h3{font-size:19px;margin:7px 0}.card p{color:#666;margin:0 0 10px;min-height:20px}.price{font-size:23px;font-weight:900;margin:4px 0 12px}.order{width:100%;text-align:center;margin-top:auto}.promos{background:var(--soft)}.promo-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.promo{background:#fff;border-radius:14px;padding:22px;text-align:center;box-shadow:0 5px 18px #00000010;border:1px solid #f5d8e2}.promo .badge{display:inline-block;background:var(--pink);color:#fff;padding:5px 10px;border-radius:20px;font-size:11px;font-weight:900}.promo h3{margin:12px 0 8px}.promo .deal{font-size:25px;font-weight:900}.promo p{color:#666}.about,.contact{background:#fff;text-align:center;padding:60px 8%}.about p,.contact p{max-width:780px;margin:15px auto;line-height:1.7;font-size:17px}.deposit{background:var(--dark);color:#fff;text-align:center;padding:26px 8%;font-size:18px;font-weight:800}.deposit strong{color:#ffd3df}footer{background:#111;color:#fff;text-align:center;padding:28px 5%;font-size:14px}@media(max-width:1000px){.grid{grid-template-columns:repeat(3,1fr)}.promo-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:800px){.hero{grid-template-columns:1fr}.hero-photo{order:-1;min-height:330px}h1{font-size:48px}.grid{grid-template-columns:repeat(2,1fr)}header{justify-content:center;text-align:center}nav{order:3;width:100%}}@media(max-width:560px){.grid,.promo-grid{grid-template-columns:1fr}.top{font-size:11px;gap:10px}.hero-text{padding:45px 7%}.hero-photo{min-height:280px}h1{font-size:42px}.section{padding:45px 5%}}
 </style>
 </head>
 <body>
-<div class="top"><span>WHATSAPP ORDER ONLY</span><span>0622627924</span><span>QUALITY • STYLE • VALUE</span></div>
+<div class="top"><span>WHATSAPP ORDER ONLY</span><span>062 262 7924</span><span>50% DEPOSIT TO SECURE YOUR ORDER</span></div>
 <header>
-<div><div class="logo">RENEE'S<br><span>BOUTIQUE</span></div><div class="tag">STYLE THAT SPEAKS</div></div>
-<nav><a href="#home">HOME</a><a href="#shop">SHOP</a><a href="#about">ABOUT US</a><a href="#contact">CONTACT</a></nav>
-<a class="btn" href="https://wa.me/27622627924?text=Hello%20RENEE%27S%20BOUTIQUE%2C%20I%20would%20like%20to%20place%20an%20order.">ORDER ON WHATSAPP</a>
+<div><div class="logo">RENEE'S<br><span>BOUTIQUE</span></div><div class="tag">STYLE • VALUE • QUALITY</div></div>
+<nav><a href="#home">HOME</a><a href="#shop">SHOP</a><a href="#promotions">PROMOTIONS</a><a href="#about">ABOUT US</a><a href="#contact">CONTACT</a></nav>
+<a class="btn" target="_blank" href="https://wa.me/27622627924?text=Hello%20RENEE%27S%20BOUTIQUE%2C%20I%20would%20like%20to%20place%20an%20order.">ORDER ON WHATSAPP</a>
 </header>
-<section class="hero" id="home"><div class="hero-text"><div class="kicker">WELCOME TO</div><h1>RENEE'S<br><span>BOUTIQUE</span></h1><p>Your one-stop shop for clothes, bags, blankets, shoes, socks, curtains and home items.</p><a class="btn" href="#shop">SHOP OUR PRODUCTS</a></div><div class="hero-photo"></div></section>
-<section class="section" id="shop">
-<div class="heading"><small>SHOP OUR PRODUCTS</small><h2>Featured Products</h2></div>
-<div class="category-buttons">
-<button class="cat active" data-filter="All">ALL</button>
-<button class="cat" data-filter="Shoes">SHOES</button>
-<button class="cat" data-filter="Bags">BAGS</button>
-<button class="cat" data-filter="Clothes">CLOTHES</button>
-<button class="cat" data-filter="Blankets">BLANKETS</button>
-<button class="cat" data-filter="Socks">SOCKS</button>
-<button class="cat" data-filter="Curtains">CURTAINS</button>
-<button class="cat" data-filter="Dinner Set">DINNER SET</button>
-<button class="cat" data-filter="Home Decor">HOME DECOR</button>
-</div>
-<div class="grid" id="productGrid"><p>Loading products...</p></div>
-</section>
-<section class="about" id="about"><h2>About Us</h2><p>Welcome to <b>RENEE'S BOUTIQUE</b>, your one-stop shop for beautiful and quality products. We offer clothes, bags, blankets, shoes, socks, curtains and home items, carefully selected to give you quality, style and value. Shopping is easy and convenient — choose what you like and order directly through WhatsApp.</p><a class="btn" href="https://wa.me/27622627924?text=Hello%20RENEE%27S%20BOUTIQUE%2C%20I%20would%20like%20to%20place%20an%20order.">ORDER ON WHATSAPP</a></section>
-<section class="contact" id="contact"><h2>Contact RENEE'S BOUTIQUE</h2><p>WhatsApp orders only: <b>0622627924</b></p><a class="btn" href="https://wa.me/27622627924?text=Hello%20RENEE%27S%20BOUTIQUE%2C%20I%20would%20like%20to%20place%20an%20order.">CHAT ON WHATSAPP</a></section>
-<footer>© 2026 RENEE'S BOUTIQUE • WhatsApp 0622627924</footer>
-
-
-
+<section class="hero" id="home"><div class="hero-text"><div class="kicker">WELCOME TO</div><h1>RENEE'S<br><span>BOUTIQUE</span></h1><p>Your one-stop shop for clothes, bags, blankets, shoes, socks, curtains and home items. Affordable prices and easy WhatsApp ordering.</p><a class="btn" href="#shop">SHOP OUR PRODUCTS</a></div><div class="hero-photo" aria-label="RENEE'S BOUTIQUE featured shoes"></div></section>
+<div class="notice">💗 <span>ORDER POLICY:</span> WhatsApp orders only. A <span>50% deposit is required to secure your order.</span> Delivery is quoted according to the order and destination.</div>
+<section class="section" id="shop"><div class="heading"><small>SHOP OUR PRODUCTS</small><h2>Our Products</h2></div>
+<div class="category-buttons"><button class="cat active" data-filter="All">ALL</button><button class="cat" data-filter="Shoes">SHOES</button><button class="cat" data-filter="Bags">BAGS</button><button class="cat" data-filter="Clothes">CLOTHES</button><button class="cat" data-filter="Blankets">BLANKETS</button><button class="cat" data-filter="Socks">SOCKS</button><button class="cat" data-filter="Curtains">CURTAINS</button><button class="cat" data-filter="Dinner Set">DINNER SET</button><button class="cat" data-filter="Home Decor">HOME DECOR</button></div>
+<div class="grid" id="productGrid"><p>Loading products...</p></div></section>
+<section class="section promos" id="promotions"><div class="heading"><small>SAVE MORE</small><h2>Promotions & Combo Deals</h2></div><div class="promo-grid">
+<div class="promo"><span class="badge">SOCKS</span><h3>Multi-Buy Deal</h3><div class="deal">3 pairs for R50</div><p>Normal: R60. Save R10.</p></div>
+<div class="promo"><span class="badge">PAJAMAS</span><h3>Combo Deal</h3><div class="deal">2 sets for R240</div><p>Normal: R260. Save R20.</p></div>
+<div class="promo"><span class="badge">BRAS</span><h3>Buy More & Save</h3><div class="deal">2 for R130</div><p>Normal: R140. Save R10.</p></div>
+<div class="promo"><span class="badge">UNDERWEAR</span><h3>Combo Deal</h3><div class="deal">2 for R80</div><p>Normal: R90. Save R10.</p></div>
+</div></section>
+<div class="deposit">🔐 <strong>50% DEPOSIT REQUIRED</strong> to secure your order. The remaining balance is payable as agreed when your order is ready. Please WhatsApp us before making payment.</div>
+<section class="about" id="about"><h2>About Us</h2><p>Welcome to <b>RENEE'S BOUTIQUE</b>, your one-stop shop for beautiful and quality products. We offer clothes, bags, blankets, shoes, socks, curtains and home items, carefully selected to give you quality, style and value. Shopping is easy and convenient — choose what you like and order directly through WhatsApp.</p><a class="btn" target="_blank" href="https://wa.me/27622627924?text=Hello%20RENEE%27S%20BOUTIQUE%2C%20I%20would%20like%20to%20place%20an%20order.">ORDER ON WHATSAPP</a></section>
+<section class="contact" id="contact"><h2>Contact RENEE'S BOUTIQUE</h2><p>WhatsApp orders only: <b>062 262 7924</b></p><p><b>50% deposit is required to secure the order.</b></p><a class="btn" target="_blank" href="https://wa.me/27622627924?text=Hello%20RENEE%27S%20BOUTIQUE%2C%20I%20would%20like%20to%20place%20an%20order.">CHAT ON WHATSAPP</a></section>
+<footer>© 2026 RENEE'S BOUTIQUE • WhatsApp 062 262 7924 • 50% Deposit Required</footer>
 <script>
-const WHATSAPP = "27622627924";
-let allProducts = [];
-
-function renderProducts(filter = "All") {
-  const grid = document.getElementById("productGrid");
-  const items = filter === "All" ? allProducts : allProducts.filter(p => p.category === filter);
-  grid.innerHTML = items.map(p => `
-    <article class="card">
-      <img src="${p.image}" alt="${p.name}">
-      <div class="card-body">
-        <div class="category">${p.category}</div>
-        <h3>${p.name}</h3>
-        <p>${p.details || ""}</p>
-        <div class="price">${p.price}</div>
-        <a class="order" target="_blank" href="https://wa.me/${WHATSAPP}?text=${encodeURIComponent("Hello RENEE'S BOUTIQUE, I would like to order " + p.name + " for " + p.price + ".")}">Order on WhatsApp</a>
-      </div>
-    </article>
-  `).join("") || "<p>No products in this category yet.</p>";
-}
-
-fetch("products.json")
-  .then(r => r.json())
-  .then(data => { allProducts = data; renderProducts(); })
-  .catch(() => { document.getElementById("productGrid").innerHTML = "<p>Products could not be loaded.</p>"; });
-
-document.querySelectorAll(".cat").forEach(button => {
-  button.addEventListener("click", () => {
-    document.querySelectorAll(".cat").forEach(b => b.classList.remove("active"));
-    button.classList.add("active");
-    renderProducts(button.dataset.filter);
-  });
-});
+const WHATSAPP='27622627924';let allProducts=[];
+function renderProducts(filter='All'){const grid=document.getElementById('productGrid');const items=filter==='All'?allProducts:allProducts.filter(p=>p.category===filter);grid.innerHTML=items.map(p=>`<article class="card"><img src="${p.image}" alt="${p.name}" loading="lazy"><div class="card-body"><div class="category">${p.category}</div><h3>${p.name}</h3><p>${p.details||''}</p><div class="price">${p.price}</div><a class="order" target="_blank" href="https://wa.me/${WHATSAPP}?text=${encodeURIComponent("Hello RENEE'S BOUTIQUE, I would like to order " + p.name + " for " + p.price + ". I understand that a 50% deposit is required to secure my order. Please confirm delivery cost.")}">Order on WhatsApp</a></div></article>`).join('')||'<p>No products in this category yet.</p>';}
+fetch('products.json').then(r=>r.json()).then(data=>{allProducts=data;renderProducts();}).catch(e=>{document.getElementById('productGrid').innerHTML='<p>Products could not be loaded. Please make sure products.json is uploaded with this website.</p>';});
+document.querySelectorAll('.cat').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.cat').forEach(x=>x.classList.remove('active'));b.classList.add('active');renderProducts(b.dataset.filter);}));
 </script>
 </body></html>
