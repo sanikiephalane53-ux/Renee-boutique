@@ -61,5 +61,26 @@
     "category": "Home Decor",
     "details": "Black & navy blue",
     "image": "images/product-9.jpg"
+  },
+  {
+    "name": "5-Piece Mokka Quilted Quilt Set",
+    "price": "R650",
+    "category": "Blankets",
+    "details": "Super King Size • 1 bedspread, 2 pillowcases & 2 Euroshams",
+    "image": "images/quilted-mokka-set-r650.jpg"
+  },
+  {
+    "name": "Ribbed Stretch Leggings",
+    "price": "R60",
+    "category": "Clothes",
+    "details": "Black, charcoal, brown, beige & grey",
+    "image": "images/ribbed-stretch-leggings-r60.jpg"
+  },
+  {
+    "name": "Geometric Quilted Bedspread",
+    "price": "R350",
+    "category": "Blankets",
+    "details": "Black, white & grey geometric pattern",
+    "image": "images/geometric-quilted-bedspread-r350.jpg"
   }
 ]

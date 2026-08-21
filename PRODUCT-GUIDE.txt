@@ -33,3 +33,8 @@ Shoes, Bags, Clothes, Blankets, Socks, Curtains, Dinner Set, Home Decor
 Keep the JSON punctuation exactly as shown. Each product needs a comma after it except the last product.
 
 This is a GitHub-based self-management system: you can add/edit/remove products yourself without changing the website design.
+
+NEW PRODUCTS ADDED
+- 5-Piece Mokka Quilted Quilt Set — R650
+- Ribbed Stretch Leggings — R60
+- Geometric Quilted Bedspread — R350
